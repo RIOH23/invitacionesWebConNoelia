@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Noelia Rodriguez</title>
+    <style>
+        /* --- CSS CONFIGURACIÓN --- */
+        :root {
+            --color-principal: #f4cfdf; 
+            --color-secundario: #bda55d; 
+            --color-texto: #444;
+            --fuente-elegante: 'Playfair Display', serif;
+            --fuente-texto: 'Lora', serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;700&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--fuente-texto); color: var(--color-texto); line-height: 1.6; background-color: #fff; }
+        h1, h2, h3 { font-family: var(--fuente-elegante); font-weight: 400; text-align: center; }
+
+        .container { width: 90%; max-width: 800px; margin: 0 auto; padding: 50px 0; }
+
+        /* --- SECCIONES --- */
+        .portada {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .portada h1 { font-size: 3.5rem; color: white; margin: 10px 0; }
+        .portada h2 { font-size: 1.4rem; letter-spacing: 4px; text-transform: uppercase; color: white; }
+        .fecha-banner { font-size: 1.3rem; border-top: 1px solid #fff; border-bottom: 1px solid #fff; padding: 10px 25px; margin-top: 20px; }
+
+        .frase { background-color: var(--color-principal); color: white; padding: 60px 20px; text-align: center; }
+        .frase p { font-style: italic; font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+
+        /* --- CONTADOR --- */
+        .contador-bg { background: #333; color: white; padding: 60px 0; text-align: center; }
+        .reloj { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+        .box { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; min-width: 70px; border: 1px solid var(--color-secundario); }
+        .box span { font-size: 2rem; font-weight: bold; display: block; color: var(--color-secundario); }
+
+        /* --- TARJETAS --- */
+        .card { 
+            background: #fff; border: 1px solid #eee; border-radius: 15px; padding: 30px; 
+            margin: 20px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; 
+        }
+        .card h3 { color: var(--color-secundario); margin-bottom: 15px; font-size: 1.8rem; }
+        .btn { 
+            display: inline-block; background: var(--color-secundario); color: white; 
+            padding: 12px 25px; text-decoration: none; border-radius: 30px; margin-top: 15px; 
+            transition: 0.3s; font-weight: bold;
+        }
+
+        .vestimenta img { width: 80px; margin: 10px; opacity: 0.7; }
+        
+        .whatsapp-btn { background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; font-weight: bold; margin-top: 20px; }
+        
+        footer { background: #f4f4f4; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <section class="portada">
+        <h2>Mis XV Años</h2>
+        <h1>Noelia Rodriguez</h1>
+        <div class="fecha-banner">23 de Marzo, 2026</div>
+    </section>
+
+    <section class="frase">
+        <p>"Un millón de recuerdos me trajeron hasta aquí y uno más se hará eterno si estás conmigo en esta noche tan especial."</p>
+    </section>
+
+    <section class="container">
+        <h3>Padres</h3>
+        <p style="text-align: center; font-size: 1.2rem; margin-top: 10px;">Raul Rodriguez & Salma Gonzalez</p>
+
+        <div class="card">
+            <h3>Ceremonia Religiosa</h3>
+            <p><strong>Calle Julio A. Roca</strong></p>
+            <p>Ruben Jaramillo 1781</p>
+            <p>Hora: 06:30 PM</p>
+            <a href="https://maps.google.com/?q=Calle+Julio+A.+Roca+Ruben+Jaramillo+1781" target="_blank" class="btn">Ver Mapa</a>
+        </div>
+
+        <div class="card">
+            <h3>Recepción</h3>
+            <p><strong>Salon Fiesta Armonia</strong></p>
+            <p>Avenida Jalisco 1341</p>
+            <p>Hora: 09:00 PM</p>
+            <a href="https://maps.google.com/?q=Salon+fiesta+armonia+avenida+jalisco+1341" target="_blank" class="btn">Ver Mapa</a>
+        </div>
+    </section>
+
+    <section class="contador-bg">
+        <div class="container">
+            <h2>Faltan...</h2>
+            <div class="reloj">
+                <div class="box"><span id="d">00</span>Días</div>
+                <div class="box"><span id="h">00</span>Hrs</div>
+                <div class="box"><span id="m">00</span>Min</div>
+                <div class="box"><span id="s">00</span>Seg</div>
+            </div>
+            <p style="margin-top: 20px; letter-spacing: 2px;">#NoeliaAmaARicardo</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <h3>Código de Vestimenta</h3>
+            <p><strong>Formal</strong></p>
+            <p>Se reserva el color Rosa y Dorado para la quinceañera.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mesa de Regalos</h3>
+            <p>Tienda: <strong>Supermarket Muil</strong></p>
+            <p>Número de evento: 8411220891</p>
+        </div>
+
+        <div class="card" style="border: none; box-shadow: none;">
+            <h3>Confirmación</h3>
+            <p>Favor de confirmar antes del 20 de marzo de 2026</p>
+            <a href="https://wa.me/528411220891?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Noelia%20Rodriguez" target="_blank" class="whatsapp-btn">Confirmar por WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Noelia Rodriguez - 2026</p>
+        <p>¡Te esperamos!</p>
+    </footer>
+
+    <script>
+        const target = new Date("March 23, 2026 18:30:00").getTime();
+        
+        const intervalo = setInterval(() => {
+            const now = new Date().getTime();
+            const diff = target - now;
+
+            // Si la fecha ya pasó, detener el contador en ceros
+            if (diff < 0) {
+                clearInterval(intervalo);
+                document.getElementById("d").innerText = "00";
+                document.getElementById("h").innerText = "00";
+                document.getElementById("m").innerText = "00";
+                document.getElementById("s").innerText = "00";
+                return;
+            }
+
+            const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const segs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // padStart asegura que los números tengan 2 dígitos (ej. 09 en vez de 9)
+            document.getElementById("d").innerText = dias.toString().padStart(2, '0');
+            document.getElementById("h").innerText = horas.toString().padStart(2, '0');
+            document.getElementById("m").innerText = mins.toString().padStart(2, '0');
+            document.getElementById("s").innerText = segs.toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
